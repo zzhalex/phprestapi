@@ -1,0 +1,21 @@
+@import 'bootstrap.min.css';
+
+html,body{
+    width: 100%;
+    text-align: center;
+}
+
+.row{
+    text-align: center;
+}
+
+.btn.btn-outline-primary{
+    width: 100px;
+}
+
+form{
+    width: 20%;
+    margin-left: 40%;
+    text-align: center;
+    
+} 
