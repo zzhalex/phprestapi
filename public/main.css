@@ -5,17 +5,62 @@ html,body{
     text-align: center;
 }
 
-.row{
-    text-align: center;
-}
+
 
 .btn.btn-outline-primary{
     width: 100px;
 }
 
-form{
-    width: 20%;
-    margin-left: 40%;
-    text-align: center;
+
+.input{
+	height: 500px;
+	width: 100%;
+}
+.form-group{
+   width: 100%;
     
 } 
+
+.input p {
+	width: 100px;
+	text-align: left;
+}
+
+#title{
+	margin-left: 10px;
+	width: 200px;
+}
+
+#description{
+	margin-left: 10px;
+	width: 400px;
+	height: 300px;
+}
+
+#submit{
+	width: 200px;
+}
+
+.box{
+	height: 500px;
+	padding:auto;
+}
+
+
+.boxtitle{
+	height: 50px;
+}
+
+.boxdes{
+	height: 300px;
+	width: 90%;
+	margin-left: 5%;
+	text-align: left;
+}
+
+.boxbutton{
+	height: 100px;
+}
+
+
+

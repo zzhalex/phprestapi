@@ -13,16 +13,25 @@
     <p class="lead">This is a PHP Blog, can do post, update, delete.</p>
   </div>
 </div>
-<div class="row">
-    <div class="box">
+<div class="row input">
+    <div class="col-md-8 offset-md-2">
+        
         <form action="index.php" method="post">
-            Title: <input id="title" type="text" name="title"><br>
-            Descrption: <input id="description" type="text" name="description"><br>
-            
-            <input type="hidden" name="aid" id="aid">
-            <button id="submit" type="submit" name='submit'>submit</button>
-            <button id="update" type="update" style='display:none;' name="update">update</button>
+            <div class="form-group row">
+                <p>Title<p>
+                <input id="title" class="from-control" type="text" name="title">
+            </div>
+            <div class="form-group row">
+                <p>Descrption<p>
+                <textarea id="description" class="from-control"  name="description"></textarea> 
+            </div>
+            <div class="form-group row">
+                <input type="hidden" name="aid" id="aid">
+                <button id="submit" class="btn btn-primary" type="submit" name='submit'>submit</button>
+                <button id="update" class="btn btn-primary" type="update" style='display:none;' name="update">update</button>
+            </div>
         </form>
+       
     </div>
 </div>
 
@@ -76,13 +85,17 @@
                 'description' => $user['description']
             ],true);
             echo '
-                    <div class="col-md-4">
-                        <p>'.$user['title'].'</p>
-                        <p>'.$user['description'].'</p> ';
-            echo "
+                    <div class="col-md-4 box">
+                        <div class="boxtitle">
+                            <p>'.$user['title'].'</p>
+                        </div>
+                        <div class="boxdes">
+                            <p>'.$user['description'].'</p> 
+                        </div>';
+            echo "  <div class='boxbutton'>
                         <a href='#' class='btn btn-outline-primary' onclick='updateUser($data);'>Edit</a>
                         <a href='index.php?action=delete&aid=".$user['_id']."' class='btn btn-outline-primary'>Delte</a><br>
-                    
+                        </div>
                     </div>";
         }
 
